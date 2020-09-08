@@ -1,0 +1,486 @@
+/* -----------------------------
+Template Name: 
+Template URI: 
+Author: 
+Author URI: 
+Version: 1.0
+------------------------------- */
+
+/* -----------------------------------
+CSS Table of content
+--------------------------------------
+1. Template default style
+2. Button style
+3. Area Heading Style
+4. Header section style
+5. Slider section style
+. Footer section style
+--------------------------------------*/
+
+
+/* -----------------------------
+1. Template default styles
+--------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900|Open+Sans:400,500,600,700&display=swap');
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+}
+a {
+  transition: all .3s ease-in-out 0s;
+}
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover {
+  color: #888888;
+  text-decoration: none;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #232332;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none
+}
+
+p {
+  font-size: 14px;
+  color: #737272;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+hr {
+  margin: 0;
+  padding: 0px;
+  border-bottom: 1px solid #eee;
+  border-top: 0px;
+}
+
+label {
+  color: #626262;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+}
+::-moz-selection {
+  color: #008B8B;
+  text-shadow: none;
+}
+::selection {
+  color: #008B8B;
+  text-shadow: none;
+}
+
+*::-moz-placeholder {
+  color: #555555;
+  font-size: 14px;
+}
+
+*::placeholder {
+  color: #555555;
+  font-size: 14px;
+}
+
+.mark {
+  color: #ffffff;
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+.theme-section {
+  padding: 100px 0;
+}
+.theme-section-2 {
+  padding: 80px 0;
+}
+.theme-section-3 {
+  padding: 70px 0;
+}
+.white-bg {
+  background: #ffffff;
+}
+.gray-bg {
+  background: #eee;
+}
+.gray-bg-2 {
+  background: #eeeeee;
+}
+.dark-bg {
+  background: #000000;
+}
+.dark-bg-2 {
+  background: #1c1c1c;
+}
+
+
+/* ------------------------------
+2. Button style
+---------------------------------*/
+.button {
+  background: transparent none repeat scroll 0 0;
+  color: #fff;
+  padding: 0 30px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: capitalize;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  border-radius: 4px;
+  letter-spacing: .5px;
+  box-shadow: 0 15px 20px 1px rgba(2, 100, 216, 0.2), 0 0 0 2px #048bf6;
+  transition: all 0.7s ease 0s;
+}
+.button:hover {
+  outline: none;
+  text-decoration: none;
+  color: #048bf6;
+}
+
+.button.btn-color::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, #08adeb 0%, #0173fe 100%) repeat scroll 0 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 190%;
+  z-index: -1;
+  transition: all 0.7s ease 0s;
+  border-radius: 0 0 50% 50%;
+}
+.button.btn-color:hover::before {
+  height: 0%;
+}
+
+.button.btn-transparent {
+  color: #048bf6;
+}
+.button.btn-transparent:hover {
+  color: #fff;
+  outline: 0 none;
+}
+.button.btn-transparent::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, #08adeb 0%, #0173fe 100%) repeat scroll 0 0;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 180%;
+  z-index: -1;
+  transition: all 0.7s ease 0s;
+  border-radius: 0 0 50% 50%;
+}
+.button.btn-transparent:hover::before {
+    top: 0px;
+}
+
+.button+.button {
+  margin-left: 25px;
+}
+
+.button:focus {
+  outline: none;
+}
+
+/*Transparent background button*/
+.button.transparent-btn {
+  color: #66CDAA;
+  border: 2px solid #66CDAA;
+}
+.button.transparent-btn:hover {
+  color: #fff;
+  border-color: transparent;
+  /*box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);*/
+}
+.button.transparent-btn::before {
+  height: 0%;
+}
+
+.button.transparent-btn.btn-up:hover::before,
+.button.transparent-btn.btn-down:hover::before {
+  height: 100%;
+  border-radius: 4px;
+}
+
+/*Static button*/
+.button.static-btn {
+  border: none;
+}
+.button.static-btn:hover {
+  color: #fff;
+  box-shadow: 2px 7px 15px #66CDAA;
+}
+.button.static-btn.button.btn-up:hover::before,
+.button.static-btn.button.btn-down:hover::before {
+  height: 100%;
+  border-radius: 4px;
+}
+
+/* -----------------------------
+3. Area Heading Style
+-------------------------------- */
+.section-heading {
+  width: 50%;
+  margin: 0 auto 50px;
+}
+.section-heading-2 {
+  width: 100%;
+}
+
+.section-title {
+  font-weight: 800;
+  font-size: 36px;
+  letter-spacing: 2px;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+}
+.section-title::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, #66CDAA 0%, #008B8B 100%);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  transition: transform 0.8s cubic-bezier(0.2,1,0.3,1);
+}
+
+.section-heading h5 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #008B8B;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.section-heading p {
+  color: #737272;
+  display: block;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+
+/* -----------------------------
+4. Header section style
+-------------------------------- */
+
+.header-section {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 3;
+}
+.navbar.fixed-top {
+  padding: 25px 0;
+  transition: all 0.7s ease 0s;
+}
+.navbar.fixed-top.affix {
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, #005ce2 0%, #0380fa 100%) repeat scroll 0 0;
+  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.8);
+  padding: 0;
+}
+
+.navbar-brand img {
+  width: 100%;
+  transition: all 0.5s ease 0s;
+}
+.navbar.affix .navbar-brand img {
+  width: 80%;
+}
+
+.navbar-nav li a {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
+  text-transform: capitalize;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #fdfeff;
+}
+.nav-item:last-child .nav-link {
+  padding-right: 0;
+}
+
+/*Dropdown menu*/
+.dropdown-menu {
+  margin: 0;
+}
+.dropdown:hover > .dropdown-menu {
+  display: block;
+  width: 200px;
+}
+.navbar-nav li a.dropdown-item {
+  color: #333;
+  padding: 10px 20px;
+}
+.navbar-nav li a.dropdown-item:hover {
+  color: #008B8B;
+}
+
+
+/* -----------------------------
+5. Slider section style
+-------------------------------- */
+.slider-section {
+  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #e0f5fd 0%, #f5f7f9 100%) repeat scroll 0 0;
+  position: relative;
+}
+
+/*.slider-section::before {
+  content: "";
+  position: absolute;
+  background: url(img/bg/slider.png) no-repeat top right / 70%;
+  right: 0;
+  top: 0;
+  width: 945px;
+  height: 900px;
+}*/
+
+.slider-content-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.slider-content {
+  width: 70%;
+  position: relative;
+}
+
+.slider-content h1 {
+  color: #090f40;
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.slider-content p {
+  font-weight: 300;
+  margin-bottom: 55px;
+  width: 75%;
+  font-size: 16px;
+}
+
+
+
+/* -----------------------------
+. Footer section style
+-------------------------------- */
+
+
+/*scroll top to button style */
+.to-top-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  color: #ffffff;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0) linear-gradient(to top, #08adeb 0%, #0173fe 100%) repeat scroll 0 0;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease 0s;
+}
+.to-top-btn:focus {
+  color: #fff;
+}
+.to-top-btn.to-top-show {
+  opacity: 1;
+  transform: translateY(0px);
+  visibility: visible;
+  z-index: 9;
+  transition: all 0.3s ease 0s;
+}
+.to-top-btn.to-top-show:hover {
+  color: #fff;
+  box-shadow: 2px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
